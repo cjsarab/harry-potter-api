@@ -18,7 +18,7 @@ function App() {
   }, [query])
 
   const getItems = function(){
-    fetch(`https://hp-api.herokuapp.com/api/characters?name=${query}`)
+    fetch(`https://hp-api.herokuapp.com/api/characters?name=${query}/items?limit=25`)
     .then(res => res.json())
     .then(items => setItems(items));
     setIsLoading(false)
